@@ -1,0 +1,184 @@
+:root {
+    --text: #000;
+    --border: #ea736d;
+    --link: #039be5;
+    --line: #fbdc4d;
+}
+
+.none {
+    display: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    font-family: 'M PLUS 1p', sans-serif;
+    line-height: 1.2;
+}
+
+body, h1, h2, h3, h4, p ,ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a, a:hover {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+svg {
+    max-width: 100%;
+}
+
+button, input {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    max-width: 320px;
+    padding: 0px 15px;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+        max-width: 738px;
+    }
+    
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+        padding: 0;
+    }
+}
+
+.title-h1 {
+    font-size: 42px;
+    font-weight: 800;
+
+    @media (min-width: 768px) {
+        font-size: 52px;
+    }
+    
+    @media (min-width: 1200px) {
+        font-size: 90px;
+    }
+}
+
+.title-h2 {
+    font-size: 64px;
+    font-weight: 800;
+}
+
+.title-h3 {
+    font-size: 30px;
+    font-weight: 800;
+
+    @media (min-width: 768px) {
+        font-size: 32px;
+    }
+    
+    @media (min-width: 1200px) {
+        font-size: 40px;
+    }
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--line);
+    border: 4px solid var(--line);
+    border-radius: 32px;
+    padding: 0 38px;
+    font-size: 22px;
+    line-height: 56px;
+    font-weight: 700;
+
+    transition: 0.2s ease-in;
+
+    &:hover {
+        background-color: #ffd200;
+        border-color: #ffd200;
+    }
+
+    &:active {
+        background-color: #e1bc10;
+        border-color: #e1bc10;
+    }
+}
+
+.btn-light {
+    color: #464646;
+    background-color: #fff;
+    border: 4px solid #464646;
+
+    &:hover {
+        color: #797979;
+        border-color: #797979;
+        background-color: #fff;
+    }
+
+    &:active {
+        color: #181818;
+        border-color: #181818;
+        background-color: #fff;
+    }
+}
+
+.underline {
+    position: relative;
+    z-index: 2;
+
+    &::after {
+        content: "";
+        position: absolute;
+        height: 12px;
+        background-color: var(--line);
+        bottom: 6px;
+        left: -5px;
+        right: -5px;
+        z-index: -1;
+    }
+}
+
+.social {
+    a {
+        height: 50px;
+        width: 50px;
+        margin-right: 25px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+  
+.icon-telegram {
+    color: #039be5;
+
+    &:hover {
+        color: #039be5;
+    }
+}
