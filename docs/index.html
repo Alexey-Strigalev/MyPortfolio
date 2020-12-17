@@ -46,6 +46,7 @@
                 <a href="#">info@webdeveloper.ru</a>
             </div>
         </div>
+        <div class="header-overlay"></div>
         <!-- // Мобильное меню -->
 
         <!-- Навигация -->
@@ -79,13 +80,14 @@
                             <p>Верстальщик сайтов, веб-разработчик. Оперативная верстка. Работаю с соблюдением сроков и выполнением ТЗ.</p>
                         </div>
                         <div class="about-btn-row">
-                            <a href="#" class="btn">Познакомиться</a>
+                            <a href="#acquaintance" class="btn">Познакомиться</a>
                             <a href="#" class="btn btn-light">Контакты</a>
                         </div>
                     </div>
                     <div class="header-foto">
                         <!-- <img src="./img/main/foto.jpg" alt="Foto"> -->
                     </div>
+                    <div class="header-foto-overlay"></div>
                 </div>
             </div>
         </div>
@@ -94,7 +96,7 @@
             <img src="./img/main/BG-header.png" alt="bg-img">
         </div>
 
-        <div class="header-skills">
+        <div class="header-skills" id="acquaintance">
             <div class="container">
                 <div class="header-skills-row">
                     <div class="skills-desc">
@@ -134,8 +136,82 @@
         <!-- // Обо мне -->
     </header>
 
+    <section class="portfolio">
+        <div class="container">
+            <div class="portfolio-row">
+                <h2 class="title-h2 underline"> Портфолио</h2>
+                <div class="jobs-wrapper">
 
-    
+                    <div class="portfolio-menu">
+                        <button class="control-active" data-filter="all">Все работы</button>
+                        <button data-filter=".boots">Bootstrap</button>
+                        <button data-filter=".wp">WordPress</button>
+                        <button data-filter=".frontend">Frontend</button>
+                    </div>
+
+                    <div class="portfolio-cards-row" id="portfolio-card">
+                        <a class="mix wp boots" href="#"><div class="portfolio-card portfolio-card-big">
+                            <div class="portfolio-card-img">
+                                <button>Смотреть проект</button>
+                                <img src="./img/main/cards/forest-travel.jpg" alt="Мир авто">
+                            </div>
+                            <div class="portfolio-card-title">
+                                <h3>Верстка “Форест тревел”</h3>
+                                <p>Верстка многостраничного сайта. </p>
+                            </div>
+                        </div></a>
+                        <a class="mix wp boots" href="#"><div class="portfolio-card portfolio-card-big">
+                            <div class="portfolio-card-img">
+                                <button>Смотреть проект</button>
+                                <img src="./img/main/cards/dream.jpg" alt="Мир авто">
+                            </div>
+                            <div class="portfolio-card-title">
+                                <h3>Сайт для коворкинга “Мечта”</h3>
+                                <p>Верстка лендинга.</p>
+                            </div>
+                        </div></a>
+                        <a class="mix frontend" href="#"><div class="portfolio-card">
+                            <div class="portfolio-card-img">
+                                <button>Смотреть проект</button>
+                                <img src="./img/main/cards/avto-world01.jpg" alt="Мир авто">
+                            </div>
+                            <div class="portfolio-card-title">
+                                <h3>Верстка “Мир Авто”</h3>
+                                <p>Верстка многостраничного сайта. </p>
+                            </div>
+                        </div></a>
+                        <a class="mix boots frontend" href="#"><div class="portfolio-card">
+                            <div class="portfolio-card-img">
+                                <button>Смотреть проект</button>
+                                <img src="./img/main/cards/avto-world02.jpg" alt="Мир авто">
+                            </div>
+                            <div class="portfolio-card-title">
+                                <h3>Верстка “Мир Авто”</h3>
+                                <p>Верстка многостраничного сайта. </p>
+                            </div>
+                        </div></a>
+                        <a class="mix wp frontend" href="#"><div class="portfolio-card">
+                            <div class="portfolio-card-img">
+                                <button>Смотреть проект</button>
+                                <img src="./img/main/cards/avto-world03.jpg" alt="Мир авто">
+                            </div>
+                            <div class="portfolio-card-title">
+                                <h3>Верстка “Мир Авто”</h3>
+                                <p>Верстка многостраничного сайта. </p>
+                            </div>
+                        </div></a>
+                    </div>
+
+                </div>
+                <a href="#" class="all-jobs-link">Смотреть все работы</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="./libs/jquery/jquery-3.0.0.min.js"></script>
+    <script src="./libs/mixitup/mixitup.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

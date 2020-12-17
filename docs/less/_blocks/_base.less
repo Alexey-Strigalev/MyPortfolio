@@ -5,6 +5,10 @@
     --line: #fbdc4d;
 }
 
+::selection {
+    background-color: var(--line);
+}
+
 .none {
     display: none;
 }
@@ -24,6 +28,14 @@ html, body {
 
     font-family: 'M PLUS 1p', sans-serif;
     line-height: 1.2;
+}
+
+body.noscroll {
+    overflow: hidden;
+
+    @media (min-width: 1200px) {
+        overflow: unset;
+    }
 }
 
 body, h1, h2, h3, h4, p ,ul {
@@ -56,7 +68,11 @@ button, input {
 }
 
 button {
+    display: inline-block;
     cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
 }
 
 .container {
@@ -89,8 +105,16 @@ button {
 }
 
 .title-h2 {
-    font-size: 64px;
+    font-size: 42px;
     font-weight: 800;
+
+    @media (min-width: 768px) {
+        font-size: 52px;
+    }
+    
+    @media (min-width: 1200px) {
+        font-size: 64px;
+    }
 }
 
 .title-h3 {
@@ -149,6 +173,8 @@ button {
 
 .underline {
     position: relative;
+    display: inline-block;
+    width: fit-content;
     z-index: 2;
 
     &::after {
@@ -171,6 +197,15 @@ button {
 
         &:last-child {
             margin-right: 0;
+        }
+
+        &:hover {
+            opacity: 0.7;
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            opacity: 1;
         }
     }
 }

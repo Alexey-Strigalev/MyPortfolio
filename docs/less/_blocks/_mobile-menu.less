@@ -30,7 +30,6 @@
 }
 
 .mobile-menu .header-logo {
-    width: 60px;
     margin-bottom: 33px;
 }
 
@@ -72,7 +71,16 @@
     font-weight: 400;
 
     a {
-        color: var(--link);
-        border-bottom: 1px solid var(--link);
+        border-bottom: 1px solid #000;
+
+        &:hover {
+            color: var(--link);
+            border-bottom: 1px solid var(--link);
+        }
+
+        &:active {
+            color: var(--border);
+            border-bottom: 1px solid var(--border);
+        }
     }
 }
