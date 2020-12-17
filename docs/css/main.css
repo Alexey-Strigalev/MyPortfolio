@@ -1123,13 +1123,13 @@ button {
 }
 .work-timeline-row::after {
   content: "";
-  width: 4px;
-  border-radius: 2px;
-  background-color: #e1eef4;
   position: absolute;
   top: 94px;
   bottom: 0px;
   left: 35px;
+  width: 4px;
+  border-radius: 2px;
+  background-color: #e1eef4;
 }
 .work-timeline-row:last-of-type::after {
   display: none;
@@ -1140,6 +1140,16 @@ button {
     padding-left: 69px;
     padding-bottom: 0px;
     min-height: 203px;
+  }
+  .work-timeline-row:first-of-type:before {
+    content: "";
+    position: absolute;
+    top: -77px;
+    right: -2px;
+    width: 4px;
+    height: 57px;
+    border-radius: 2px;
+    background-color: #e1eef4;
   }
   .work-timeline-row:nth-child(even) {
     margin-left: auto;

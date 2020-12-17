@@ -38,10 +38,6 @@
         @media (min-width: 768px) {
             bottom: 5px;
         }
-        
-        @media (min-width: 1200px) {
-        
-        }
     }
 }
 
@@ -59,13 +55,13 @@
 
     &::after {
         content: "";
-        width: 4px;
-        border-radius: 2px;
-        background-color: rgb(225, 238, 244);
         position: absolute;
         top: 94px;
         bottom: 0px;
         left: 35px;
+        width: 4px;
+        border-radius: 2px;
+        background-color: rgb(225, 238, 244);
     }
 
     &:last-of-type {
@@ -79,6 +75,17 @@
         padding-left: 69px;
         padding-bottom: 0px;
         min-height: 203px;
+
+        &:first-of-type:before {
+            content: "";
+            position: absolute;
+            top: -77px;
+            right: -2px;
+            width: 4px;
+            height: 57px;
+            border-radius: 2px;
+            background-color: rgb(225, 238, 244);
+        }
 
         &:nth-child(even) {
             margin-left: auto;
