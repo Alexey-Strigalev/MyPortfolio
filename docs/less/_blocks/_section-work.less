@@ -145,6 +145,12 @@
     padding-top: 2px;
     text-align: start;
 
+    &:hover {
+        .underline::after{
+            background-color: var(--border);
+        }
+    }
+
     @media (min-width: 768px) {
         padding-top: 25px;
     }
@@ -170,6 +176,7 @@
 
     .underline::after {
         display: none;
+        transition: 0.5s;
 
         @media (min-width: 1200px) {
             display: block;

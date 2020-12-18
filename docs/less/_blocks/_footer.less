@@ -1,0 +1,44 @@
+.footer {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: #333333;
+
+    @media (min-width: 1200px) {
+        padding-top: 25px;
+        padding-bottom: 35px;
+    }
+
+    h3 {
+        margin-bottom: 14px;
+        color: #fff;
+
+        @media (min-width: 768px) {
+            margin-bottom: 17px;
+        }
+        
+        @media (min-width: 1200px) {
+            margin-bottom: 17px;
+        }
+    }
+
+    p {
+        color: #8f8f8f;
+        margin-bottom: 7px;
+        line-height: 1.5;
+
+        @media (min-width: 768px) {
+            line-height: 1.2;
+        }
+    }
+
+    a {
+        color: #8f8f8f;  
+        border-bottom: 1px solid #8f8f8f;
+        transition: 0.3s;
+
+        &:hover, &:active {
+            color: #fff;  
+            border-bottom: 1px solid #fff;
+        }
+    }
+}

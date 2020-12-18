@@ -1,0 +1,123 @@
+.contacts-form {
+    width: 100%;
+    padding-top: 52px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #fff;
+    box-shadow: 0px 28px 100px 0px rgba(194, 219, 235, 1);
+
+    @media (min-width: 768px) {
+        width: 338px;
+        padding-left: 25px;
+        padding-right: 15px;
+    }
+    
+    @media (min-width: 1200px) {
+        width: 511px;
+        padding-top: 74px;
+        padding-bottom: 40px;
+        padding-left: 62px;
+        padding-right: 60px;
+    }
+    
+}
+
+.form-item {
+    position: relative;
+}
+
+.form-item + .form-item {
+    margin-top: 36px;
+
+    @media (min-width: 768px) {
+    
+    }
+    
+    @media (min-width: 1200px) {
+        margin-top: 54px;
+    }
+    
+}
+
+.form-field {
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #bcbcbc;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    transition: 0.5s;
+
+    &:active, &:focus {
+        border-bottom: 2px solid var(--border);
+    }
+}
+
+textarea.form-field {
+    height: 121px;
+}
+
+.form-btn {
+    margin-top: 17px;
+    text-align: center;
+    line-height: 46px;
+
+    @media (min-width: 768px) {
+        margin-left: -10px;
+    }
+    
+    @media (min-width: 1200px) {
+        text-align: left;
+        margin-top: 35px;
+        margin-left: -5px;
+    }    
+}
+
+.form-btn .btn {
+    line-height: 46px;
+    font-size: 20px;
+    padding: 0 70px;
+
+    @media (min-width: 768px) {
+        padding: 0 85px;
+    }
+
+    @media (min-width: 1200px) {
+        line-height: 56px;
+        font-size: 22px;
+        padding: 0 38px;
+    }
+}
+
+.fake-placeholder {
+    position: absolute;
+    top: 13px;
+    left: 2px;
+    pointer-events: none;
+    transition: 0.5s;
+
+    font-size: 20px;
+    font-weight: 700;
+    color: #bcbcbc;
+}
+
+.fake-placeholder.last {
+    top: 4px;
+}
+
+.fake-placeholder.active {
+    top: -15px;
+    font-size: 16px;
+    color: #ed9626;
+}
+
+.fake-placeholder.last.active {
+    top: -25px;
+}
+
+.error {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--border);
+}
