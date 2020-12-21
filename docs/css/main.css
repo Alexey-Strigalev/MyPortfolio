@@ -205,6 +205,34 @@ button {
 .icon-telegram:hover {
   color: #039be5;
 }
+#page-nav {
+  display: none;
+}
+@media (min-width: 1200px) {
+  #page-nav {
+    display: block;
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  #page-nav li {
+    width: 12px;
+    height: 12px;
+    background-color: #89b4cb;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: 0.5s;
+  }
+  #page-nav li a {
+    display: block;
+    height: 100%;
+  }
+  #page-nav li.active {
+    background-color: var(--border);
+  }
+}
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -910,6 +938,14 @@ button {
 }
 .portfolio-card:hover .portfolio-card-title h3::before {
   width: 100%;
+}
+.hide-card {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .hide-card {
+    display: block;
+  }
 }
 .portfolio-card-img {
   position: relative;

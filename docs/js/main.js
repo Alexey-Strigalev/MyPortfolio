@@ -132,7 +132,44 @@ $(document).ready (function () {
 				$('#answer').html(html);
 			}
 		});
-		// Чтобы по Submit больше ничего не выполнялось - делаем возврат false чтобы прервать цепчку срабатывания остальных функций
+		// Чтобы по Submit больше ничего не выполнялось - делаем возврат false чтобы прервать цепочку срабатывания остальных функций
 		return false;
-	}
+    }
+
+    // ПАРАЛЛАКС ДВИЖЕНИЯ ЗА МЫШКОЙ
+    let prxScene = document.querySelector('.contacts-row')
+    let prxItem = document.querySelectorAll('.move-quot');
+    prxScene.addEventListener('mousemove', function (e) {
+        let x = e.clientX / window.innerWidth;
+        let y = e.clientY / window.innerHeight;
+        for (let item of prxItem) {
+            item.style.transform = 'translate(' + x * 150 + 'px, ' + y * 150 + 'px)';
+        }
+    });
+
+    // Навигация
+    $('#page-nav').onePageNav({
+        currentClass: 'active',
+        changeHads: false,
+        scrollSpeed:750,
+        scrollThreshold: 0.5,
+        filter: '',
+        easing: 'swing',
+        begin: function () {},
+        end: function () {},
+        scrollChange: function ($currentListItem) {}
+    });
+
+
+    const hideCard = document.querySelectorAll('.portfolio-card');
+    const allJobsButton = document.querySelector('.all-jobs-link');
+
+    allJobsButton.addEventListener('click', function(){
+
+        this.classList.toggle('hide-card');
+        for(let item of hideCard){
+            item.classList.remove('hide-card');
+            };    
+    });
+
 })

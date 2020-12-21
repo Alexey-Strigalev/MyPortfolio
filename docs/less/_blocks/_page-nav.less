@@ -1,0 +1,30 @@
+#page-nav {
+    display: none;
+
+    @media (min-width: 1200px) {
+        display: block;
+        position: fixed;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+
+        li {
+            width: 12px;
+            height: 12px;
+            background-color: #89b4cb;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            transition: 0.5s;
+
+            a {
+                display: block;
+                height: 100%;
+            }
+        }
+
+        li.active {
+            background-color: var(--border);
+        }
+    }
+}
