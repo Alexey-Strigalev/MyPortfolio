@@ -141,6 +141,34 @@
     }
 }
 
+[data-aos="fade-right"], [data-aos="fade-left"] {
+    opacity: 1;
+    transition-property: transform, opacity;
+    transform: translateX(0px);
+  
+    &.aos-animate {
+      opacity: 1;
+      transform: translateX(0);
+    }
+ 
+    @media (min-width: 768px) {
+        opacity: 0;
+        transition-property: transform, opacity;
+        transform: translateX(-100px);
+      
+        &.aos-animate {
+          opacity: 1;
+          transform: translateX(0);
+        }
+    }
+}
+
+[data-aos="fade-left"] {
+    @media (min-width: 768px) {
+        transform: translateX(100px);
+    }
+}
+
 .work-timeline-desc {
     padding-top: 2px;
     text-align: start;

@@ -46,10 +46,21 @@
         margin-bottom: 26px;
         border: 1px dotted #FFF;
         border-bottom: 1px solid ;
+        transition: 0.5s;
 
         &:focus {
             outline: none;
             border: 1px dotted var(--border);
+        }
+
+        &:hover {
+            font-weight: 800;
+            transform: scale(1.1);
+        }
+
+        &:active {
+            color: var(--border);
+            border-bottom: 1px solid var(--border);
         }
     }
 }

@@ -5,6 +5,17 @@
     align-items: center;
     z-index: 20;
     cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+        span {
+            background-color: var(--link);
+
+            &::before, &::after {
+                background-color: var(--link);
+            }
+        }
+    }
 
     @media (min-width: 1200px) {
         display: none;
@@ -38,6 +49,8 @@
 }
 
 .toggle-menu.active {
+    transition: 1s;
+
     span {
         background-color: transparent;
 

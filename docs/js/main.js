@@ -118,7 +118,7 @@ $(document).ready (function () {
 
 	function ajaxFormSubmit() {
 
-		let string = $(".contact-form").serialize(); // Соханяем данные введенные в форму в строку.
+		let string = $(".contacts-form").serialize(); // Соханяем данные введенные в форму в строку.
 
 		//Формируем ajax запрос
 		$.ajax({
@@ -128,7 +128,7 @@ $(document).ready (function () {
 
 			// Функция если все прошло успешно
 			success: function (html) {
-				$(".contact-form").slideUp(800);
+				$(".contacts-form").slideUp(800);
 				$('#answer').html(html);
 			}
 		});
@@ -161,6 +161,8 @@ $(document).ready (function () {
     });
 
 
+
+    // Смотреть все работы
     const hideCard = document.querySelectorAll('.portfolio-card');
     const allJobsButton = document.querySelector('.all-jobs-link');
 

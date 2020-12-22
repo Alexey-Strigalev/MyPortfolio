@@ -277,10 +277,19 @@ button {
   margin-bottom: 26px;
   border: 1px dotted #FFF;
   border-bottom: 1px solid ;
+  transition: 0.5s;
 }
 .mobile-nav a:focus {
   outline: none;
   border: 1px dotted var(--border);
+}
+.mobile-nav a:hover {
+  font-weight: 800;
+  transform: scale(1.1);
+}
+.mobile-nav a:active {
+  color: var(--border);
+  border-bottom: 1px solid var(--border);
 }
 .mobile-menu .social {
   margin-bottom: 33px;
@@ -339,6 +348,7 @@ button {
 }
 .header-overlay.active {
   transform: translate(0, 0);
+  backdrop-filter: blur(5px);
 }
 .header-main {
   display: flex;
@@ -603,6 +613,14 @@ button {
   align-items: center;
   z-index: 20;
   cursor: pointer;
+  transition: 0.5s;
+}
+.toggle-menu:hover span {
+  background-color: var(--link);
+}
+.toggle-menu:hover span::before,
+.toggle-menu:hover span::after {
+  background-color: var(--link);
 }
 @media (min-width: 1200px) {
   .toggle-menu {
@@ -631,6 +649,9 @@ button {
 }
 .toggle-menu span::after {
   bottom: -10px;
+}
+.toggle-menu.active {
+  transition: 1s;
 }
 .toggle-menu.active span {
   background-color: transparent;
@@ -1238,6 +1259,35 @@ button {
     margin-top: 27px;
   }
 }
+[data-aos="fade-right"],
+[data-aos="fade-left"] {
+  opacity: 1;
+  transition-property: transform, opacity;
+  transform: translateX(0px);
+}
+[data-aos="fade-right"].aos-animate,
+[data-aos="fade-left"].aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+@media (min-width: 768px) {
+  [data-aos="fade-right"],
+  [data-aos="fade-left"] {
+    opacity: 0;
+    transition-property: transform, opacity;
+    transform: translateX(-100px);
+  }
+  [data-aos="fade-right"].aos-animate,
+  [data-aos="fade-left"].aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (min-width: 768px) {
+  [data-aos="fade-left"] {
+    transform: translateX(100px);
+  }
+}
 .work-timeline-desc {
   padding-top: 2px;
   text-align: start;
@@ -1629,6 +1679,18 @@ textarea.form-field {
   font-size: 14px;
   font-weight: 700;
   color: var(--border);
+}
+.contact-form__success {
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #000;
+}
+@media (min-width: 1200px) {
+  .contact-form__success {
+    font-size: 16px;
+    margin-top: 15px;
+  }
 }
 .footer {
   padding-top: 35px;
