@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="./fonts/mplus1p/mplus1p.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css">
     <link rel="shortcut icon" href="./img/main/favicon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="./css/main.css">
@@ -121,7 +122,7 @@
                             <li>Pixel perfect, полное соответствие макету.</li>
                             <li>Верстаю с сеткой или без.</li>
                             <li>Адаптивная верстка под мобильные устройства.</li>
-                            <li>Оптимизация по retina экраны</li>
+                            <li>Оптимизация под retina экраны</li>
                             <li>С Bootstrap и без него.</li>
                         </ul>
                         <a href="#portfolio" class="btn">Смотреть работы</a>
@@ -166,88 +167,63 @@
                     </div>
 
                     <div class="portfolio-cards-row" id="portfolio-card">
-                        <a class="mix wp boots" href="#"><div class="portfolio-card portfolio-card-big">
-                            <div class="portfolio-card-img">
-                                <button>Смотреть проект</button>
-                                <img src="./img/main/cards/forest-travel.jpg" alt="Мир авто">
-                            </div>
-                            <div class="portfolio-card-title">
-                                <h3>Верстка “Форест тревел”</h3>
-                                <p>Верстка многостраничного сайта. </p>
-                            </div>
-                        </div></a>
-                        <a class="mix wp boots" href="#"><div class="portfolio-card portfolio-card-big">
-                            <div class="portfolio-card-img">
-                                <button>Смотреть проект</button>
-                                <img src="./img/main/cards/dream.jpg" alt="Мир авто">
-                            </div>
-                            <div class="portfolio-card-title">
-                                <h3>Сайт для коворкинга “Мечта”</h3>
-                                <p>Верстка лендинга.</p>
-                            </div>
-                        </div></a>
-                        <a class="mix frontend" href="#"><div class="portfolio-card">
-                            <div class="portfolio-card-img">
-                                <button>Смотреть проект</button>
-                                <img src="./img/main/cards/avto-world01.jpg" alt="Мир авто">
-                            </div>
-                            <div class="portfolio-card-title">
-                                <h3>Верстка “Мир Авто”</h3>
-                                <p>Верстка многостраничного сайта. </p>
-                            </div>
-                        </div></a>
-                        <a class="mix boots frontend" href="#"><div class="portfolio-card">
-                            <div class="portfolio-card-img">
-                                <button>Смотреть проект</button>
-                                <img src="./img/main/cards/avto-world02.jpg" alt="Мир авто">
-                            </div>
-                            <div class="portfolio-card-title">
-                                <h3>Верстка “Мир Авто”</h3>
-                                <p>Верстка многостраничного сайта. </p>
-                            </div>
-                        </div></a>
-                        <a class="mix wp frontend" href="#"><div class="portfolio-card">
-                            <div class="portfolio-card-img">
-                                <button>Смотреть проект</button>
-                                <img src="./img/main/cards/avto-world03.jpg" alt="Мир авто">
-                            </div>
-                            <div class="portfolio-card-title">
-                                <h3>Верстка “Мир Авто”</h3>
-                                <p>Верстка многостраничного сайта. </p>
-                            </div>
-                        </div></a>
-                        <a class="mix wp frontend" href="#"><div class="portfolio-card hide-card">
-                            <div class="portfolio-card-img">
-                                <button>Смотреть проект</button>
-                                <img src="./img/main/cards/avto-world03.jpg" alt="Мир авто">
-                            </div>
-                            <div class="portfolio-card-title">
-                                <h3>Верстка “Мир Авто”</h3>
-                                <p>Верстка многостраничного сайта. </p>
-                            </div>
-                        </div></a>
-                        <a class="mix wp frontend" href="#"><div class="portfolio-card hide-card">
-                            <div class="portfolio-card-img">
-                                <button>Смотреть проект</button>
-                                <img src="./img/main/cards/avto-world03.jpg" alt="Мир авто">
-                            </div>
-                            <div class="portfolio-card-title">
-                                <h3>Верстка “Мир Авто”</h3>
-                                <p>Верстка многостраничного сайта. </p>
-                            </div>
-                        </div></a>
-                        <a class="mix wp frontend" href="#"><div class="portfolio-card hide-card">
-                            <div class="portfolio-card-img">
-                                <button>Смотреть проект</button>
-                                <img src="./img/main/cards/avto-world03.jpg" alt="Мир авто">
-                            </div>
-                            <div class="portfolio-card-title">
-                                <h3>Верстка “Мир Авто”</h3>
-                                <p>Верстка многостраничного сайта. </p>
-                            </div>
-                        </div></a>
-                    </div>
 
+                        <div class="portfolio-card portfolio-card-big mix wp boots">
+                            <div class="portfolio-card-img">
+                                <button data-fancybox="my-works" data-src="./img/main/gallery/full/card01.jpg">Смотреть проект</button>
+                                <img src="./img/main/gallery/small/card01.jpg" alt="Мир авто">
+                            </div>
+                            <div class="portfolio-card-title">
+                                <h3><a href="http://d91781oe.beget.tech/MyPorrfolio/docs/index.html" target="_blank">Личный сайт-портфолио</a></h3>
+                                <p>Верстка личного сайта-портфолио. </p>
+                            </div>                           
+                        </div>
+                        
+                        <div class="portfolio-card portfolio-card-big mix wp boots">      
+                            <div class="portfolio-card-img">
+                                <button data-fancybox="my-works" data-src="./img/main/gallery/full/card02.jpg">Смотреть проект</button>
+                                <img src="./img/main/gallery/small/card02.jpg" alt="Мир авто">
+                            </div>
+                            <div class="portfolio-card-title">
+                                <h3><a href="http://d91781oe.beget.tech/project-UNIT/index.html" target="_blank">Учебный макет UNIT</a></h3>
+                                <p>Верстка лендинга с мобильной адаптацией.</p>
+                            </div>                       
+                        </div>
+
+                        <div class="portfolio-card mix frontend">                   
+                            <div class="portfolio-card-img">
+                                <button data-fancybox="my-works" data-src="./img/main/gallery/full/card03.jpg">Смотреть проект</button>
+                                <img src="./img/main/gallery/small/card03.jpg" alt="Мир авто">
+                            </div>
+                            <div class="portfolio-card-title">
+                                <h3><a href="http://d91781oe.beget.tech/forest_travel_main/forect_travel_main.html" target="_blank">Учебный макет “Форест Тревел”</a></h3>
+                                <p>Верстка многостраничного сайта. </p>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-card mix boots frontend">
+                            <div class="portfolio-card-img">
+                                <button data-fancybox="my-works" data-src="./img/main/gallery/full/card04.jpg">Смотреть проект</button>
+                                <img src="./img/main/gallery/small/card04.jpg" alt="Мир авто">
+                            </div>
+                            <div class="portfolio-card-title">
+                                <h3><a href="http://d91781oe.beget.tech/card_book/card_book.html" target="_blank">Верстка карточки книги</a></h3>
+                                <p>Верстка карточки по PSD макету под PixelPerfect. </p>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-card hide-card mix wp frontend">
+                            <div class="portfolio-card-img">
+                                <button data-fancybox="my-works" data-src="./img/main/gallery/full/card05.jpg">Смотреть проект</button>
+                                <img src="./img/main/gallery/small/card05.jpg" alt="Мир авто">
+                            </div>
+                            <div class="portfolio-card-title">
+                                <h3><a href="http://d91781oe.beget.tech/Adaptiv_less&MF/index.html" target="_blank">Верстка учебной карточки</a></h3>
+                                <p>Верстка карточки с мобильной адаптацией. </p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
                 <a href="#portfolio" class="all-jobs-link">Смотреть все работы</a>
             </div>
@@ -427,6 +403,7 @@
     <script src="./libs/jquery.validate/jquery.validate.js"></script>
     <script src="./libs/nav.js/nav.js"></script>
     <script src="./libs/mixitup/mixitup.min.js"></script>
+    <script src="./libs/fancybox/jquery.fancybox.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
