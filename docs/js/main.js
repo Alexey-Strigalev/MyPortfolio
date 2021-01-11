@@ -168,7 +168,7 @@ $(document).ready (function () {
 
     allJobsButton.addEventListener('click', function(){
 
-        this.classList.toggle('hide-card');
+        this.classList.toggle('hide-link');
         for(let item of hideCard){
             item.classList.remove('hide-card');
             };    

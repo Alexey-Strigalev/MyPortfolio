@@ -35,6 +35,15 @@
 }
 
 .header-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 95;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,7 +51,7 @@
     max-width: 1430px;
     padding-left: 21px;
     padding-right: 34px;
-    height: 109px;
+    height: 75px;
     margin: 0 auto;
 
     @media (min-width: 768px) {
@@ -51,6 +60,13 @@
     }
     
     @media (min-width: 1200px) {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        background-color: transparent;
+        box-shadow: none;
+
         height: 185px;
         padding-left: 15px;
         padding-right: 15px;
@@ -154,9 +170,7 @@
 }
 
 .header-center {
-    @media (min-width: 768px) {
-        padding-top: 40px;
-    }
+    padding-top: 140px;
 
     @media (min-width: 1200px) {
         padding-top: 86px;
@@ -166,6 +180,7 @@
 .header-center-row {
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
     position: relative;
     z-index: 3;
 
@@ -254,25 +269,29 @@
 }
 
 .header-foto {
-    background-image: url(../img/main/header/foto.jpg);
-    background-repeat: no-repeat;
-    width: 100%;
+    width: 290px;
     height: 290px;
     margin-bottom: 51px;
+    object-fit: cover;
+    overflow: hidden;
+
+    @media (min-width: 576px) {
+        width: 410px;
+        height: 410px;
+    }
 
     @media (min-width: 768px) {
         width: 50%;
-        margin-left: 39px;
+        width: 290px;
+        height: 290px;
+        margin-left: auto;
         margin-bottom: 0;
     }
 
     @media (min-width: 1200px) {
         z-index: 9;
-        height: auto;
-        margin-top: 26px;
-        background-image: url(../img/main/header/foto-deck.jpg);
-        background-repeat: no-repeat;
-        background-position: right;
+        width: 410px;
+        height: 410px;
     }
 }
 
