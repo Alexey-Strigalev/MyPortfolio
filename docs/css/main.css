@@ -558,12 +558,12 @@ button {
 .header-links a:last-child {
   margin-right: 0;
 }
-.icon-instagram {
+.icon-telegram-header {
   width: 30px;
 }
-.icon-instagram:hover,
-.icon-instagram:active {
-  color: #0077b5;
+.icon-telegram-header:hover,
+.icon-telegram-header:active {
+  color: #0088cc;
 }
 .icon-github {
   width: 30px;
@@ -1132,10 +1132,6 @@ a.hide-link {
 .portfolio-card {
   display: block;
   overflow: hidden;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  -moz-transition: 0.5s;
-  transition: 0.5s;
   text-align: start;
 }
 @media (min-width: 576px) {
@@ -1157,28 +1153,6 @@ a.hide-link {
   .portfolio-card {
     max-width: 360px;
   }
-}
-.portfolio-card:hover .portfolio-card-img button {
-  -webkit-transform: translate(-50%, -50%);
-     -moz-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-       -o-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-.portfolio-card:hover .portfolio-card-img::before {
-  -webkit-transform: translatey(0);
-     -moz-transform: translatey(0);
-      -ms-transform: translatey(0);
-       -o-transform: translatey(0);
-          transform: translatey(0);
-}
-.portfolio-card:hover .portfolio-card-title h3,
-.portfolio-card:hover a {
-  color: var(--border);
-}
-.portfolio-card:hover .portfolio-card-title h3::before,
-.portfolio-card:hover a::before {
-  width: 100%;
 }
 .portfolio-card {
   margin-bottom: 49px;
@@ -1290,6 +1264,20 @@ a.hide-link {
 .portfolio-card-img button:active {
   background-color: #d4423b;
 }
+.portfolio-card-img:hover button {
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.portfolio-card-img:hover::before {
+  -webkit-transform: translatey(0);
+     -moz-transform: translatey(0);
+      -ms-transform: translatey(0);
+       -o-transform: translatey(0);
+          transform: translatey(0);
+}
 .portfolio-card-title {
   padding-left: 3px;
 }
@@ -1303,6 +1291,9 @@ a.hide-link {
     padding-left: 0;
   }
 }
+.portfolio-card-title:hover h3 {
+  color: var(--border);
+}
 .portfolio-card-title h3 {
   position: relative;
   margin-bottom: 11px;
@@ -1315,26 +1306,6 @@ a.hide-link {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-}
-.portfolio-card-title h3 a {
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  -moz-transition: 0.5s;
-  transition: 0.5s;
-}
-.portfolio-card-title h3::before {
-  position: absolute;
-  display: block;
-  content: "";
-  height: 2px;
-  width: 0;
-  bottom: 0;
-  left: 0;
-  background-color: var(--border);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  -moz-transition: 0.5s;
-  transition: 0.5s;
 }
 @media (min-width: 768px) {
   .portfolio-card-title h3 {
@@ -1418,14 +1389,13 @@ a.hide-link {
   }
 }
 .section-work {
-  padding-top: 54px;
+  padding-top: 90px;
   padding-bottom: 15px;
   text-align: center;
   overflow: hidden;
 }
 @media (min-width: 768px) {
   .section-work {
-    padding-top: 80px;
     padding-bottom: 87px;
   }
 }
