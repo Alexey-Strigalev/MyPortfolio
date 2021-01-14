@@ -112,7 +112,26 @@ $(document).ready (function () {
 		submitHandler: function (form) {
 			ajaxFormSubmit();
 		}
-    })
+    });
+
+    //валидация поле телефона 
+    $(".phone").mask("+7 (999) 999-99-99");
+    //ф-ция для позиции курсора
+    $.fn.setCursorPosition = function (pos) {
+        if ($(this).get(0).setSelectionRange) {
+            $(this).get(0).setSelectionRange(pos, pos);
+        } else if ($(this).get(0).createTextRange) {
+            var range = $(this).get(0).createTextRange();
+            range.collapse(true);
+            range.moveEnd('character', pos);
+            range.moveStart('character', pos);
+            range.select();
+        }
+    };
+    //ф-ция для позиции курсора для нашего поля phone
+    $('.phone').click(function () {
+        $(this).setCursorPosition(4); // set position number
+    });
     
     // Функция AJAX запрса на сервер
 
@@ -172,6 +191,20 @@ $(document).ready (function () {
         for(let item of hideCard){
             item.classList.remove('hide-card');
             };    
+    });
+
+
+    // показать кнопку скролл вверх
+    $('#backTop').hide();
+    $(window).scroll(function(){
+        if($(this).width() < 1200){
+            if( $(this).scrollTop() > 300 ){
+                $('#backTop').fadeIn();
+            }
+            else{
+                $('#backTop').fadeOut();
+            }
+        }
     });
 
 })

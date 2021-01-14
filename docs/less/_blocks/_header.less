@@ -256,34 +256,49 @@
     display: none;
 
     @media (min-width: 1200px) {
-        display: block;
+        display: flex;
 
-        a {
+        .animate {
             margin-right: 13px;
+        }
+    }
+}
 
-            &:last-child {
-                margin-right: 0;
-            }
+.summary {
+    margin-top: 30px;
+
+    .btn {
+        font-size: 20px;
+        line-height: 48px;
+
+        svg {
+            width: 22px;
+            margin-right: 15px;
+        }
+
+        @media (min-width: 1200px) {
+            line-height: 56px;
+            font-size: 22px;
         }
     }
 }
 
 .header-foto {
     width: 290px;
-    height: 290px;
+    height: 330px;
     margin-bottom: 51px;
     object-fit: cover;
     overflow: hidden;
 
     @media (min-width: 576px) {
         width: 410px;
-        height: 410px;
+        height: 450px;
     }
 
     @media (min-width: 768px) {
         width: 50%;
         width: 290px;
-        height: 290px;
+        height: 330px;
         margin-left: auto;
         margin-bottom: 0;
     }
@@ -291,7 +306,7 @@
     @media (min-width: 1200px) {
         z-index: 9;
         width: 410px;
-        height: 410px;
+        height: 510px;
     }
 }
 

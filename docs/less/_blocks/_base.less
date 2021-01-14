@@ -183,6 +183,37 @@ button {
     }
 }
 
+.animate {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: -50px;
+        top: -50px;
+        width: 20px;
+        height: 150px;
+        transform: rotate(45deg);
+        background: -o-linear-gradient(227deg, rgba(255, 255, 255, 0.25) 6%, rgba(255, 255, 255, 0.75) 70%);
+        background: linear-gradient(227deg, rgba(255, 255, 255, 0.25) 6%, rgba(255, 255, 255, 0.75) 70%);
+        z-index: 5;
+
+        animation-name: btnAnimate;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes btnAnimate {
+    0% {
+        left: -5%;
+    }
+    100% {
+        left: 110%;
+    }
+}
+
 .underline {
     position: relative;
     display: inline-block;
@@ -228,5 +259,33 @@ button {
 
     &:hover {
         color: #039be5;
+    }
+}
+
+#backTop {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 5;
+    display: block;
+    color: var(--border);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: #fff;
+
+
+    svg {
+        width: 40px;
+    }
+
+    &:hover {
+        background-color: var(--border);
+        border: 1px solid var(--border);
+
+        svg {
+            color: #fff;
+        }
     }
 }
