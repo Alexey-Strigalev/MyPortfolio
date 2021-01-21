@@ -7,3 +7,5 @@
 * Модальные окна карточек с помощью Fancybox
 * Фильтр карточек работ с помощью MixItUp
 * Форма обратной связи (Ajax, PHP)
+
+Демо: https://alexey-strigalev.github.io/MyPortfolio/
