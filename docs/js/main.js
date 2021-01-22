@@ -73,13 +73,23 @@ $(document).ready (function () {
 
         // Если инпут теряет фокус
         item.addEventListener('blur', function(){
-
-            if(item.value.length > 0){
+            
+            if(item.classList.contains('phone')){
+            	let phone = document.querySelector('.phone');
+				let arr = [];
+				for(let i = 0; i < phone.value.length; i++){
+				    if(phone.value.charCodeAt(i) > 47 && phone.value.charCodeAt(i) < 58) arr.push(phone.value[i])}
+				
+				if(arr.length != 11) thisPlaceholder.classList.remove('active')
+            }
+            else {
+            	if(item.value.length > 0){
                 thisPlaceholder.classList.add('active');
-            }
-            else{
-                thisPlaceholder.classList.remove('active');
-            }
+	            	}
+	            	else{
+		                thisPlaceholder.classList.remove('active');
+		            }
+        		}
         })
     }
 

@@ -231,6 +231,7 @@
 }
 
 .about-desk {
+    margin-bottom: 15px;
     font-size: 18px;
     font-weight: 500;
     color: #393f47;
@@ -253,10 +254,16 @@
 }
 
 .about-btn-row {
-    display: none;
+    display: flex;
+
+    >a {
+        display: none;
+    }
 
     @media (min-width: 1200px) {
-        display: flex;
+        >a {
+            display: inline-block;
+        }
 
         .animate {
             margin-right: 13px;
@@ -265,7 +272,6 @@
 }
 
 .summary {
-    margin-top: 30px;
 
     .btn {
         font-size: 20px;
